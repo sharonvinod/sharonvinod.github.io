@@ -1,0 +1,67 @@
+<mvc:View xmlns:c="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sv.pf.controller.Main" xmlns:tnt="sap.tnt"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" height="100%">
+	<App>
+		<Page title="My PortFolio" enableScrolling="true" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer">
+			<headerContent>
+				<Image src="https://www.sap.com/content/dam/application/shared/logos/sap-logo.png" height="20px" width="40px"/>
+			</headerContent>
+			<content>
+				<VBox>
+					<l:VerticalLayout id="containerLayout" width="100%">
+						<l:BlockLayout id="BlockLayout" background="Light">
+							<l:BlockLayoutRow accentCells="Accent1">
+								<l:BlockLayoutCell id="Accent1" width="2" title="Sharon Vinod">
+									<Image
+										src="https://1.bp.blogspot.com/-fsjjVDPErZc/Xpmawgmw4OI/AAAAAAAAM0Q/bnhepVe1Cs8dkWgCkafd8G5fR9KBotvjACPcBGAsYHg/s1600/IMG_20190413_170931_Bokeh__01__01.jpg"
+										height="222px" width="300px"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell title="About Me:">
+									<Text text="SAP Full Stack Developer "/>
+									<Text text="ABAP, SAP Business Workflow, Webdynpro, UI5 and Fiori"/>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell title="Contact me:">
+									<Text text="{i18n>address}"/>
+									<Label/>
+								<!--	<Text text="Mob: 9x645xx6x8"/>-->
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+							<l:BlockLayoutRow accentCells="Accent2">
+								<l:BlockLayoutCell id="Accent2" width="2" title="Some Sample UI5 Apps using free OData/SAP services:">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+										backgroundImage="https://cdn.pixabay.com/photo/2017/05/01/13/01/vehicle-2275456_1280.jpg" frameType="OneByOne" press="onPress">
+										<TileContent footer="Report Available" frameType="OneByOne">
+											<NewsContent contentText="Northwind based Sample Report" subheader="OData based Report"/>
+										</TileContent>
+									</GenericTile>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+										backgroundImage="{i18n>sapimage}" frameType="OneByOne" press="onPress">
+										<TileContent footer="Check More" frameType="OneByOne">
+											<NewsContent contentText="Master Detail App" subheader="SAP Test OData"/>
+										</TileContent>
+									</GenericTile>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
+					</l:VerticalLayout>
+				</VBox>
+			</content>
+			<footer>
+				<OverflowToolbar id="otbFooter">
+					<ToolbarSpacer/>
+					<Text text="Created Using">
+						<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+					</Text>
+					<Image src="https://raw.githubusercontent.com/SAP/ui5-tooling/master/docs/images/UI5_logo_wide.png" height="50px" width="90px">
+						<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+					</Image>
+					<Text text="Powered by">
+						<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+					</Text>
+					<Image src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="30px" width="30px">
+						<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+					</Image>
+				</OverflowToolbar>
+			</footer>
+		</Page>
+	</App>
+</mvc:View>
