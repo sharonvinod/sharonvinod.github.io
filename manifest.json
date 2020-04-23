@@ -11,7 +11,20 @@
 		"tags": {
 			"keywords": ["{{sharon}}", "{{vinod}}", "{{sharonvinod}}"]
 		},
-		"ach": "SV-PF"
+		"ach": "SV-PF",
+		"dataSources": {
+			"Northwind.svc": {
+				"uri": "/Northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		}
 	},
 	"sap.ui": {
 		"technology": "UI5",
@@ -49,34 +62,49 @@
 				"settings": {},
 				"preload": false,
 				"uri": "model/mockData/Header.json"
+			},
+			"northwind": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "Northwind.svc",
+				"preload": true
 			}
 		},
-	"rootView": {
+		"rootView": {
 			"viewName": "sv.pf.view.Main",
 			"id": "idRootView",
 			"type": "XML"
 		},
 		"routing": {
 			"config": {
+				"routerClass": "sap.m.routing.Router",
 				"viewPath": "sv.pf.view",
 				"viewType": "XML",
-				"controlId": "myApp"
+				"controlId": "myApp",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"async": true
 			},
 			"targets": {
 				"mainRoute": {
 					"viewType": "XML",
 					"transition": "slide",
-					"viewId": "idView1",
-					"viewName": "Main",
-					"controlAggregation": "masterPages"
-				
+					"viewId": "IdMain",
+					"viewName": "Main"
+				},
+				"NorthwindView": {
+					"viewType": "XML",
+					"viewName": "NorthwindView",
+					  "viewId": "IdnwView"
 				}
 			},
 			"routes": [{
 				"name": "mainRoute",
 				"pattern": "",
-				"titleTarget": "",
-				"greedy": false,
 				"target": ["mainRoute"]
 			}]
 		}

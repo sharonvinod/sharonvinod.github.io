@@ -1,7 +1,7 @@
 <mvc:View xmlns:c="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sv.pf.controller.Main" xmlns:tnt="sap.tnt"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" height="100%">
-	<App id="myApp">
-		<Page title="My PortFolio" enableScrolling="true" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer">
+	<App>
+		<Page title="Second View" enableScrolling="true" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer">
 			<headerContent>
 				<Image src="https://www.sap.com/content/dam/application/shared/logos/sap-logo.png" height="20px" width="40px"/>
 			</headerContent>
@@ -22,45 +22,14 @@
 								<l:BlockLayoutCell title="Contact me:">
 									<Text text="{i18n>address}"/>
 									<Label/>
-									<!--	<Text text="Mob: 9x645xx6x8"/>-->
+								<!--	<Text text="Mob: 9x645xx6x8"/>-->
 								</l:BlockLayoutCell>
 							</l:BlockLayoutRow>
-							<l:BlockLayoutRow accentCells="Accent3">
-								<l:BlockLayoutCell id="Accent3" width="2" title="Skills">
-									<l:VerticalLayout class="sapUiContentPadding" width="100%">
-										<l:content>
-											
-											<List headerText="">
-												<DisplayListItem label="{i18n>generic1}"/>
-											</List>	
-											
-											<List headerText="ABAP">
-												<DisplayListItem label="{i18n>abap1}" />
-												<DisplayListItem label="{i18n>abap2}" />
-												<DisplayListItem label="{i18n>abap3}"  />
-												<DisplayListItem label="{i18n>abap4}" />
-											</List>
-												<List headerText="Webdynpro">
-												<DisplayListItem label="{i18n>webd1}" />
-												<DisplayListItem label="{i18n>webd2}" />
-												<DisplayListItem label="{i18n>webd3}" />
-												<DisplayListItem label="{i18n>webd4}" />
-											</List>
-												<List headerText="Workflow">
-												<DisplayListItem label="{i18n>wflo1}"/>
-												<DisplayListItem label="{i18n>wflo2}" />
-												<DisplayListItem label="{i18n>wflo3}" />
-												<DisplayListItem label="{i18n>wflo4}" />
-											</List>
-											<List headerText="Fiori and UI5">
-												<DisplayListItem label="{i18n>ui51}" />
-												<DisplayListItem label="{i18n>ui52}" />
-												<DisplayListItem label="{i18n>ui53}" />
-											</List>
-										</l:content>
-									</l:VerticalLayout>
-								</l:BlockLayoutCell>
-							</l:BlockLayoutRow>
+							<l:BlockLayoutRow accentCells="Accent2">
+								<l:BlockLayoutCell id="Accent2" width="2" title="Some Sample UI5 Apps using free OData/SAP services:">
+								</l:BlockLayoutCell>	
+							</l:BlockLayoutRow>	
+							
 							<l:BlockLayoutRow accentCells="Accent2">
 								<l:BlockLayoutCell id="Accent2" width="2" title="Some Sample UI5 Apps using free OData/SAP services:">
 									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
@@ -69,7 +38,8 @@
 											<NewsContent contentText="Northwind based Sample Report" subheader="OData based Report"/>
 										</TileContent>
 									</GenericTile>
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" backgroundImage="{i18n>sapimage}" frameType="OneByOne" press="onPress">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+										backgroundImage="{i18n>sapimage}" frameType="OneByOne" press="onPress">
 										<TileContent footer="Check More" frameType="OneByOne">
 											<NewsContent contentText="Master Detail App" subheader="SAP Test OData"/>
 										</TileContent>
@@ -98,5 +68,5 @@
 				</OverflowToolbar>
 			</footer>
 		</Page>
-	</App>
+		</App>
 </mvc:View>

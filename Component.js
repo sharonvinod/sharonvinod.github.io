@@ -6,7 +6,7 @@ function(UIComponent){
 			"manifest" : "json"
 		},
 		init: function(){
-			sap.ui.core.UIComponent.prototype.init.apply(this);
+			sap.ui.core.UIComponent.prototype.init.apply(this, arguments);
 			
 			var oRouter = this.getRouter();
 				
